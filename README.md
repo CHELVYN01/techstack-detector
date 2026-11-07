@@ -6,11 +6,15 @@ The extension source lives on the [`v.0.1`](../../tree/v.0.1) branch. The downlo
 from that branch at build time, so it is not committed here.
 
 ```
-EXT_DIR=/path/to/extension-checkout bun run dev    # extension = v.0.1 checkout
-EXT_DIR=/path/to/extension-checkout bun run build
+bun install
+bun run dev      # zips the extension, then starts Vite
+bun run build
 ```
 
-CI (`.github/workflows/deploy.yml`) checks out `v.0.1` into `./extension` and deploys to GitHub Pages
-on every push to `main`. After changing the extension, re-run the workflow (Actions → Deploy site → Run workflow).
+`scripts/zip.js` downloads the `v.0.1` branch from GitHub. To use a local checkout instead, set
+`EXT_DIR=/path/to/extension`. This also makes the build work on hosts that only clone `main` (Vercel, GitHub Pages).
+
+`.github/workflows/deploy.yml` deploys to GitHub Pages on every push to `main`. After changing the extension,
+redeploy (Actions → Deploy site → Run workflow, or redeploy on Vercel) to refresh the zip.
 
 MIT licensed.
