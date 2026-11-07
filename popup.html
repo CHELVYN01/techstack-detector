@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=380" />
+    <title>TechStack Detector</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="top">
+      <img id="favicon" class="favicon" alt="" hidden />
+      <div class="site">
+        <div id="domain" class="domain">—</div>
+        <div id="summary" class="summary">Memuat…</div>
+      </div>
+      <button id="btnRescan" class="icon-btn" title="Pindai ulang" aria-label="Pindai ulang">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+          <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            d="M20 11a8 8 0 1 0-2.3 5.7M20 5v6h-6" />
+        </svg>
+      </button>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="tech" role="tab">Teknologi <span id="techCount" class="count"></span></button>
+      <button class="tab" data-tab="security" role="tab">Keamanan <span id="secCount" class="count"></span></button>
+      <button class="tab" data-tab="headers" role="tab">Headers <span id="hdrCount" class="count"></span></button>
+    </nav>
+
+    <main>
+      <section id="panel-tech" class="panel active">
+        <div id="notice"></div>
+        <div id="techList"></div>
+      </section>
+      <section id="panel-security" class="panel">
+        <div id="secPanel"></div>
+      </section>
+      <section id="panel-headers" class="panel">
+        <input id="hdrFilter" class="filter" type="search" placeholder="Filter header…" />
+        <div id="statusLine" class="status-line"></div>
+        <div id="hdrList"></div>
+      </section>
+    </main>
+
+    <footer class="actions">
+      <button id="btnCopy" class="btn">Copy JSON</button>
+      <button id="btnExport" class="btn primary">Export JSON</button>
+    </footer>
+
+    <div id="toast" class="toast" role="status"></div>
+
+    <script src="signatures.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
