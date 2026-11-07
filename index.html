@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Warteg Stack — Peek Into a Website's Kitchen</title>
+    <meta name="description" content="TechStack Detector: a Chrome extension that peeks into a website's kitchen, from CMS, framework and server to security gaps." />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div class="awning" aria-hidden="true"></div>
+
+    <header class="hero">
+      <p class="sign">WARTEG STACK · OPEN 24 HOURS · PAY WITH CURIOSITY</p>
+      <h1>What Spices Was<br />This Website <em>Cooked With?</em></h1>
+      <p class="lead">
+        Every website has a kitchen: CMS, framework, server, CDN. <strong>TechStack Detector</strong> is a
+        Chrome extension that peeks into that kitchen and serves the results on a receipt.
+      </p>
+      <a class="btn" href="./techstack-detector.zip" download>🥡 Take It Away (.zip)</a>
+      <p class="small">Free, MIT licensed, and it sends your data nowhere.</p>
+
+      <div class="nota" aria-label="Sample detection result">
+        <div class="nota-head">RECEIPT #0001<br /><small>example-shop.com</small></div>
+        <ul>
+          <li><span>1x WordPress 6.5</span><i></i><span>CMS</span></li>
+          <li><span>1x nginx 1.25</span><i></i><span>Server</span></li>
+          <li><span>1x Cloudflare</span><i></i><span>CDN</span></li>
+          <li><span>1x jQuery 3.4</span><i></i><span>Stale!</span></li>
+        </ul>
+        <div class="nota-foot">SECURITY SCORE <b>B (78/100)</b></div>
+      </div>
+    </header>
+
+    <section>
+      <h2>The Menu</h2>
+      <ul class="menu">
+        <li><div><b>Brain Rice</b><small>CMS, JS frameworks and backend, with versions (even Odoo, edition included)</small></div><i></i><span>$0</span></li>
+        <li><div><b>Heart Stew</b><small>Web server, CDN, hosting and server IP</small></div><i></i><span>$0</span></li>
+        <li><div><b>Bone Fritters</b><small>UI libraries, analytics and other add-ons</small></div><i></i><span>$0</span></li>
+        <li><div><b>Immunity Iced Tea</b><small>Passive security audit, scored 0–100 and graded A–F: HSTS, CSP, cookies, vulnerable versions</small></div><i></i><span>$0</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How to Order</h2>
+      <ol class="steps">
+        <li>Download the zip above and <b>extract</b> it.</li>
+        <li>Open <code>chrome://extensions</code>, turn on <b>Developer mode</b>, click <b>Load unpacked</b> and pick the extracted folder.</li>
+        <li>Open any website, <b>reload</b> it, then click the extension icon. Your order arrives.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Customer Reviews</h2>
+      <details><summary>Does it send requests to the target website?</summary>
+        <p>No. The audit is fully passive and only reads responses your browser has already received.</p></details>
+      <details><summary>Why isn't it on the Chrome Web Store?</summary>
+        <p>The stall is still a street cart. For now, install it manually with Load unpacked.</p></details>
+      <details><summary>Is the data accurate?</summary>
+        <p>It relies on static signatures and vulnerable-version rules, so they need regular updates. Treat it as an experienced cook's guess, not a lab result.</p></details>
+    </section>
+
+    <footer>
+      <p>Thanks for stopping by · <a href="https://github.com/CHELVYN01/techstack-detector/tree/v.0.1" id="repo">The recipe (source code)</a> · MIT</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "techstack-detector-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bunx --bun vite",
+    "build": "bunx --bun vite build",
+    "preview": "bunx --bun vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
