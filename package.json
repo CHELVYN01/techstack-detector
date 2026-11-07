@@ -3,11 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "bunx --bun vite",
-    "build": "bunx --bun vite build",
+    "zip": "bun scripts/zip.js",
+    "dev": "bun run zip && bunx --bun vite",
+    "build": "bun run zip && bunx --bun vite build",
     "preview": "bunx --bun vite preview"
   },
   "devDependencies": {
+    "fflate": "^0.8.2",
     "vite": "^6.0.0"
   }
 }
